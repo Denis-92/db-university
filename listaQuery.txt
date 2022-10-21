@@ -19,7 +19,8 @@ WHERE `cfu`> 10;
 
 SELECT *
 FROM `students`
-WHERE YEAR(`date_of_birth`) < (2022 - 30);
+WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURDATE()) > 30;
+/* WHERE YEAR(`date_of_birth`) < (2022 - 30); */
 
 ---------------
 
